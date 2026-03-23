@@ -1,0 +1,19 @@
+STRIPE PRODUCT CREATED - AI VIDEO EDITING MASTERCLASS
+
+Product ID: prod_UCcoVOfZvJzjp4
+Product Name: AI Video Editing Masterclass
+
+PRICES:
+- One-time (): price_1TEDYmCDxYH1XF8FuCFVJ7QC
+- Payment plan (/month x 3): price_1TEDYmCDxYH1XF8FeJu2psoT
+
+PAYMENT LINKS:
+- One-time payment: https://buy.stripe.com/dRm14m0XSfcw0vYbxH1oI0r
+- Payment plan: https://buy.stripe.com/00wdR8cGA6G0guW0T31oI0s
+
+NEXT STEPS:
+1. Update sales page CTA buttons with these links
+2. Create thank-you page at /thank-you (redirect after purchase)
+3. Test checkout flow
+
+Created: 2026-03-23 14:50
