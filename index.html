@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Editing Masterclass - Cut Editing Time by 70%</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0f1e;color:#e5e7eb;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 20px;background:linear-gradient(135deg,#0a0f1e 0%,#1a1f3e 100%)}
+.eyebrow{color:#fbbf24;text-transform:uppercase;letter-spacing:3px;font-weight:700;font-size:0.9rem;margin-bottom:20px}
+.headline{font-size:4.5rem;font-weight:900;line-height:1.1;margin-bottom:25px;color:#fff}
+.headline .highlight{background:linear-gradient(135deg,#00d9ff 0%,#10b981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.subheadline{font-size:1.5rem;color:#9ca3af;max-width:800px;margin:0 auto 40px;font-weight:400}
+.video-placeholder{width:100%;max-width:900px;height:500px;background:#1f2937;border-radius:15px;display:flex;align-items:center;justify-content:center;margin:40px auto;border:2px solid #374151;font-size:1.5rem;color:#6b7280}
+.cta{display:inline-block;background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 100%);color:#0a0f1e;font-size:1.3rem;font-weight:900;padding:22px 50px;border-radius:50px;text-decoration:none;text-transform:uppercase;letter-spacing:1px;box-shadow:0 10px 40px rgba(251,191,36,0.3);transition:all 0.3s;margin-top:30px}
+.cta:hover{transform:translateY(-3px);box-shadow:0 15px 50px rgba(251,191,36,0.5)}
+.section{padding:100px 20px;border-top:1px solid #1f2937}
+.section-title{font-size:3rem;font-weight:900;margin-bottom:30px;text-align:center}
+.section-subtitle{font-size:1.3rem;color:#9ca3af;text-align:center;max-width:800px;margin:0 auto 60px}
+.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px}
+.problem-card{background:#1f2937;padding:35px;border-radius:12px;border-left:4px solid #ef4444}
+.problem-card h3{font-size:1.5rem;margin-bottom:15px;color:#fff}
+.timeline{max-width:900px;margin:0 auto}
+.timeline-item{display:grid;grid-template-columns:100px 1fr;gap:30px;margin-bottom:40px;align-items:start}
+.timeline-marker{background:linear-gradient(135deg,#00d9ff 0%,#10b981 100%);color:#0a0f1e;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;flex-shrink:0}
+.timeline-content{background:#1f2937;padding:30px;border-radius:12px}
+.timeline-content h3{font-size:1.6rem;margin-bottom:12px;color:#fbbf24}
+.comparison{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:0 auto}
+.comparison-card{padding:40px;border-radius:15px;border:2px solid}
+.old-way{background:rgba(239,68,68,0.1);border-color:#ef4444}
+.new-way{background:rgba(16,185,129,0.1);border-color:#10b981}
+.comparison-card h3{font-size:1.8rem;margin-bottom:25px}
+.comparison-card ul{list-style:none}
+.comparison-card ul li{padding:12px 0;padding-left:30px;position:relative}
+.old-way ul li::before{content:'❌';position:absolute;left:0;color:#ef4444;font-weight:900;font-size:1.3em}
+.new-way ul li::before{content:'✅';position:absolute;left:0;color:#10b981;font-weight:900;font-size:1.3em}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.feature-card{background:#1f2937;padding:30px;border-radius:12px;border-top:3px solid #00d9ff}
+.feature-card h4{font-size:1.4rem;margin-bottom:12px;color:#fbbf24}
+.pricing-box{max-width:600px;margin:0 auto;background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:50px;border-radius:20px;border:3px solid #fbbf24;text-align:center}
+.price{font-size:4rem;font-weight:900;color:#fbbf24;margin:20px 0}
+.price-sub{color:#9ca3af;font-size:1.2rem;margin-bottom:30px}
+.guarantee{background:rgba(16,185,129,0.1);border:2px solid #10b981;padding:40px;border-radius:15px;text-align:center;max-width:800px;margin:0 auto}
+.guarantee h3{font-size:2rem;color:#10b981;margin-bottom:20px}
+.faq{max-width:900px;margin:0 auto}
+.faq-item{background:#1f2937;padding:30px;border-radius:12px;margin-bottom:20px}
+.faq-item h4{font-size:1.3rem;margin-bottom:12px;color:#fbbf24}
+.modules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:40px}
+.module-card{background:#1f2937;padding:35px;border-radius:12px;border-top:4px solid #00d9ff}
+.module-number{display:inline-block;background:linear-gradient(135deg,#00d9ff 0%,#10b981 100%);color:#0a0f1e;font-weight:900;padding:8px 20px;border-radius:20px;margin-bottom:15px;font-size:0.9rem}
+.module-card h4{font-size:1.6rem;margin-bottom:15px;color:#fff}
+.module-card ul{list-style:none;margin-top:15px}
+.module-card ul li{padding:8px 0;padding-left:25px;position:relative;color:#9ca3af}
+.module-card ul li::before{content:'→';position:absolute;left:0;color:#00d9ff;font-weight:900}
+@media(max-width:768px){.headline{font-size:2.5rem}.comparison{grid-template-columns:1fr}.timeline-item{grid-template-columns:80px 1fr}.timeline-marker{width:80px;height:80px;font-size:1.5rem}.modules-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+<div class="container">
+<div class="eyebrow">AI VIDEO EDITING MASTERCLASS</div>
+<h1 class="headline">Cut Your Editing Time by <span class="highlight">70%</span> Using AI</h1>
+<p class="subheadline">Without sacrificing quality, losing your creative touch, or spending thousands on editors. The complete system to edit faster, publish more, and grow your channel—using AI for the tedious 70% so you focus on the creative 30% that matters.</p>
+<div class="video-placeholder">[VSL VIDEO COMING IN STAGE 4]</div>
+<a href="#pricing" class="cta">Get Instant Access Now 🚀</a>
+</div>
+</div>
+
+<!-- PROBLEM SECTION -->
+<div class="section">
+<div class="container">
+<h2 class="section-title">You're Spending 10+ Hours Per Week Editing</h2>
+<p class="section-subtitle">And it's killing your content velocity, your momentum, and your sanity.</p>
+<div class="problem-grid">
+<div class="problem-card">
+<h3>🔥 The Editing Bottleneck</h3>
+<p>You film in 2 hours. But editing takes 8-12 hours. So you publish once a week instead of daily. Your growth is capped by editing speed.</p>
+</div>
+<div class="problem-card">
+<h3>💸 Can't Afford an Editor</h3>
+<p>Good editors charge $300-1,000 per video. At 4 videos/month, that's $1,200-$4,000. You're not making enough to justify that yet.</p>
+</div>
+<div class="problem-card">
+<h3>😫 Burnout is Real</h3>
+<p>You love creating content. But editing? It's soul-crushing. Hours staring at timelines, adding captions, finding b-roll, adjusting audio. You're ready to quit.</p>
+</div>
+<div class="problem-card">
+<h3>🤖 AI Tools Are Confusing</h3>
+<p>You've heard about Descript, Opus Clip, CapCut AI... but which one do you use? For what? The tutorials are scattered. You don't have time to figure it out.</p>
+</div>
+<div class="problem-card">
+<h3>⚠️ Fear of Low Quality</h3>
+<p>You've tried AI editing before. It looked robotic. Generic. You're worried AI will make your videos look cheap and kill your brand.</p>
+</div>
+<div class="problem-card">
+<h3>📉 Missing the Algorithm</h3>
+<p>The YouTube algorithm rewards consistency. But you can't be consistent when editing takes 10 hours per video. You're losing to creators who publish daily.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SOLUTION SECTION -->
+<div class="section" style="background:#141414">
+<div class="container">
+<h2 class="section-title">What If AI Did 70% of the Work?</h2>
+<p class="section-subtitle">Not the creative stuff. The tedious stuff. Transcription. Rough cuts. Captions. B-roll. Repurposing. All automated.</p>
+<div class="comparison">
+<div class="comparison-card old-way">
+<h3>The Old Way (Manual Editing)</h3>
+<ul>
+<li>10-15 hours per video</li>
+<li>Expensive editors ($300-1,000/video)</li>
+<li>Burnout after 3 months</li>
+<li>Publish 1-2x/week max</li>
+<li>Can't repurpose (no time)</li>
+<li>Slow growth, plateau fast</li>
+</ul>
+</div>
+<div class="comparison-card new-way">
+<h3>The New Way (AI-Assisted)</h3>
+<ul>
+<li>3-4 hours per video (70% faster)</li>
+<li>DIY using free + cheap AI tools</li>
+<li>Sustainable long-term</li>
+<li>Publish 4-7x/week easily</li>
+<li>1 video → 10 clips automated</li>
+<li>Exponential growth unlocked</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- MECHANISM SECTION -->
+<div class="section">
+<div class="container">
+<h2 class="section-title">The AI Editing Framework</h2>
+<p class="section-subtitle">Here's exactly how it works. Six modules. Three hours of training. Lifetime access.</p>
+<div class="modules-grid">
+
+<div class="module-card">
+<span class="module-number">MODULE 1</span>
+<h4>The AI Editing Mindset</h4>
+<p style="margin-bottom:15px;color:#9ca3af">Most people use AI wrong. They treat it like a full replacement. Wrong. AI is for the tedious 70%. You're still the creative director.</p>
+<ul>
+<li>The 70/30 Rule (what AI should do vs. what YOU should do)</li>
+<li>Tool stack overview (free vs. paid, which to use when)</li>
+<li>Common AI editing mistakes (and how to avoid them)</li>
+<li>How to maintain quality while cutting time</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">MODULE 2</span>
+<h4>Automated Transcription & Rough Cuts</h4>
+<p style="margin-bottom:15px;color:#9ca3af">Stop scrubbing through timelines. Let AI transcribe, identify highlights, and create the first rough cut in 5 minutes.</p>
+<ul>
+<li>Descript mastery (automatic filler word removal, silence cutting)</li>
+<li>How to edit video by editing text (game-changer for speed)</li>
+<li>Creating chapter markers automatically</li>
+<li>Exporting clean first drafts in under 10 minutes</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">MODULE 3</span>
+<h4>AI B-Roll & Visual Effects</h4>
+<p style="margin-bottom:15px;color:#9ca3af">Never hunt for stock footage again. Generate custom b-roll using AI, or let AI recommend the perfect clips from free libraries.</p>
+<ul>
+<li>CapCut AI effects (auto-zoom, dynamic captions, transitions)</li>
+<li>Runway ML for custom AI-generated b-roll</li>
+<li>How to use AI to recommend Pexels/Pixabay clips</li>
+<li>Creating scroll-stopping thumbnails with AI</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">MODULE 4</span>
+<h4>Auto-Captioning & Subtitles</h4>
+<p style="margin-bottom:15px;color:#9ca3af">Captions boost retention by 40%. But they take forever manually. Let AI add perfect captions in 60 seconds.</p>
+<ul>
+<li>Opus Clip for viral-style animated captions</li>
+<li>Captions.ai for MrBeast-style subtitles</li>
+<li>How to customize fonts, colors, animations</li>
+<li>Adding emojis automatically (retention hack)</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">MODULE 5</span>
+<h4>Repurposing: 1 Video → 10 Clips</h4>
+<p style="margin-bottom:15px;color:#9ca3af">The secret to massive reach? Repurpose every long-form video into 10+ shorts for YouTube, TikTok, Instagram. All automated.</p>
+<ul>
+<li>Opus Clip to auto-generate 10 viral clips from 1 video</li>
+<li>How to batch-edit clips in 15 minutes</li>
+<li>Scheduling repurposed content across platforms</li>
+<li>Tracking which clips perform best</li>
+</ul>
+</div>
+
+<div class="module-card">
+<span class="module-number">MODULE 6</span>
+<h4>Quality Control & Human Touch</h4>
+<p style="margin-bottom:15px;color:#9ca3af">AI is powerful, but it's not perfect. Here's how to add the final 30% polish that makes your videos stand out.</p>
+<ul>
+<li>What AI can't do (and why you still matter)</li>
+<li>The 5-minute final polish checklist</li>
+<li>How to add personality to AI-edited videos</li>
+<li>Avoiding the "robotic" AI look</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- TIMELINE SECTION -->
+<div class="section" style="background:#141414">
+<div class="container">
+<h2 class="section-title">Your First 7 Days</h2>
+<p class="section-subtitle">Here's what happens after you enroll.</p>
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 1</div>
+<div class="timeline-content">
+<h3>Setup & Tooling</h3>
+<p>Install Descript, CapCut, Opus Clip. Follow the setup guide. Takes 30 minutes. You're ready to edit.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 2</div>
+<div class="timeline-content">
+<h3>First AI Edit (Rough Cut)</h3>
+<p>Upload a video to Descript. Let it transcribe. Remove filler words automatically. Export rough cut in 10 minutes. You'll be shocked how fast this is.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 3</div>
+<div class="timeline-content">
+<h3>Add B-Roll & Captions</h3>
+<p>Use CapCut AI to add dynamic captions, zoom effects, and free b-roll. Your video now looks professional. Still under 1 hour total editing time.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 4</div>
+<div class="timeline-content">
+<h3>Repurpose Into 10 Clips</h3>
+<p>Upload your video to Opus Clip. Let AI identify the 10 best moments. Download, schedule, publish. 10x your reach in 15 minutes.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 5</div>
+<div class="timeline-content">
+<h3>Polish & Publish</h3>
+<p>Add final touches (music, color grade, thumbnail). Export. Upload. Your first AI-edited video is live. Total time: 3 hours instead of 12.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 6</div>
+<div class="timeline-content">
+<h3>Batch Edit Your Backlog</h3>
+<p>Now you're fast. Take your last 3 videos and repurpose them into 30 clips. Queue them for the next month. You're ahead of schedule.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-marker">Day 7</div>
+<div class="timeline-content">
+<h3>Hit Your First Week Streak</h3>
+<p>You've published 1 long-form video + 10 shorts. That's more content than most creators publish in a month. And you're just getting started.</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- FEATURES SECTION -->
+<div class="section">
+<div class="container">
+<h2 class="section-title">Everything Included</h2>
+<p class="section-subtitle">Instant access. Lifetime updates. No recurring fees.</p>
+<div class="features-grid">
+<div class="feature-card">
+<h4>📹 6 Video Modules</h4>
+<p>3-4 hours of step-by-step training. Watch at your own pace. Lifetime access.</p>
+</div>
+<div class="feature-card">
+<h4>🛠️ AI Tool Stack Guide</h4>
+<p>Which tools to use, when to use them, how to set them up. Free + paid options included.</p>
+</div>
+<div class="feature-card">
+<h4>📋 Done-For-You Templates</h4>
+<p>Descript templates, CapCut presets, Opus prompts. Copy-paste and customize.</p>
+</div>
+<div class="feature-card">
+<h4>✅ Editing Workflow SOP</h4>
+<p>Step-by-step checklist: raw footage → polished video. Never wonder "what's next?"</p>
+</div>
+<div class="feature-card">
+<h4>💬 Private Community (30 Days)</h4>
+<p>Ask questions, get feedback, share wins. Q&A support included.</p>
+</div>
+<div class="feature-card">
+<h4>🎁 BONUS: 10 Viral Hook Templates</h4>
+<p>AI-optimized intros that grab attention in the first 3 seconds. Proven to boost retention.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PRICING SECTION -->
+<div class="section" id="pricing" style="background:#141414">
+<div class="container">
+<h2 class="section-title">Get Instant Access Now</h2>
+<p class="section-subtitle">One-time payment. Lifetime access. Start editing faster today.</p>
+<div class="pricing-box">
+<h3 style="font-size:2rem;margin-bottom:15px;color:#fff">AI Video Editing Masterclass</h3>
+<p style="color:#9ca3af;margin-bottom:25px">Complete training + templates + community</p>
+<div class="price">$297</div>
+<p class="price-sub">Or 3 payments of $99</p>
+<ul style="text-align:left;margin:30px 0;list-style:none">
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> 6 video modules (3-4 hours)</li>
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> AI tool stack guide</li>
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> Done-for-you templates</li>
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> Editing workflow SOP</li>
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> Private community (30 days)</li>
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> BONUS: 10 viral hook templates</li>
+<li style="padding:10px 0;padding-left:30px;position:relative"><span style="position:absolute;left:0;color:#10b981;font-weight:900">✓</span> Lifetime access + updates</li>
+</ul>
+<a href="#" class="cta" style="margin-top:20px;display:inline-block">Enroll Now 🚀</a>
+<p style="margin-top:25px;font-size:0.9rem;color:#6b7280">Instant access. Secure checkout. 30-day guarantee.</p>
+</div>
+</div>
+</div>
+
+<!-- GUARANTEE SECTION -->
+<div class="section">
+<div class="container">
+<div class="guarantee">
+<h3>🛡️ 30-Day Money-Back Guarantee</h3>
+<p style="font-size:1.1rem;line-height:1.7">If you don't cut your editing time by at least 50% in the first 30 days, email me for a full refund. No questions asked. You risk nothing.</p>
+</div>
+</div>
+</div>
+
+<!-- FAQ SECTION -->
+<div class="section" style="background:#141414">
+<div class="container">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="faq">
+
+<div class="faq-item">
+<h4>Do I need expensive AI tools?</h4>
+<p>No. Most of the tools I teach have free versions (Descript, CapCut, Opus Clip). The paid versions are optional and cost $10-30/month if you want advanced features.</p>
+</div>
+
+<div class="faq-item">
+<h4>I'm a complete beginner. Will this work for me?</h4>
+<p>Yes! This course assumes zero prior AI editing knowledge. I walk you through every step, from tool installation to publishing your first AI-edited video.</p>
+</div>
+
+<div class="faq-item">
+<h4>What if I already use Premiere Pro / Final Cut?</h4>
+<p>You can still use your main editor for the final polish. AI tools handle the tedious 70% (transcription, rough cuts, captions, repurposing). You export from AI tools into Premiere/Final Cut for finishing touches.</p>
+</div>
+
+<div class="faq-item">
+<h4>How long does it take to see results?</h4>
+<p>Most students cut their editing time in half within the first week. By week 2, you're publishing 2-3x more content. By week 4, you've mastered the full workflow.</p>
+</div>
+
+<div class="faq-item">
+<h4>Is this for YouTube only?</h4>
+<p>No. This works for YouTube, podcasts, TikTok, Instagram Reels, LinkedIn videos—any video content. The AI tools are platform-agnostic.</p>
+</div>
+
+<div class="faq-item">
+<h4>What if I don't like the AI editing style?</h4>
+<p>That's why Module 6 exists. I teach you how to add the "human touch" so your videos don't look robotic. AI is a tool, not a replacement. You're still the creative director.</p>
+</div>
+
+<div class="faq-item">
+<h4>Can I get a refund?</h4>
+<p>Yes. 30-day money-back guarantee. If you don't cut your editing time by at least 50%, email me for a full refund. No questions asked.</p>
+</div>
+
+<div class="faq-item">
+<h4>How long do I have access?</h4>
+<p>Lifetime. Buy once, keep forever. You'll also get free updates when new AI tools launch or workflows improve.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- FINAL CTA SECTION -->
+<div class="section">
+<div class="container" style="text-align:center">
+<h2 class="section-title">Ready to Edit Faster?</h2>
+<p class="section-subtitle">Join hundreds of creators who've cut their editing time by 70% using AI. Start today. Risk-free for 30 days.</p>
+<a href="#pricing" class="cta" style="font-size:1.5rem;padding:25px 60px">Get Instant Access Now 🚀</a>
+<p style="margin-top:30px;color:#6b7280;font-size:0.95rem">One-time payment. Lifetime access. 30-day guarantee.</p>
+</div>
+</div>
+
+</body>
+</html>
